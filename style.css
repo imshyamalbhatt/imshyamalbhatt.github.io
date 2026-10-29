@@ -21,12 +21,12 @@ html, body{ margin:0; }
 body{
   background:var(--page);
   color:var(--ink);
-  font-family:'Open Sans',Arial,Helvetica,sans-serif;
+  font-family:'DM Sans',Arial,Helvetica,sans-serif;
   font-size:15px;
   line-height:1.6;
 }
 a{ color:var(--accent-text); }
-h1, h2, h3, .btn, .name, .sec{ font-family:'League Spartan','Arial Black',Arial,sans-serif; }
+h1, h2, h3, .btn, .name, .sec{ font-family:'DM Sans',Arial,Helvetica,sans-serif; }
 
 /* ---------- pinned button bar ---------- */
 .bar{
@@ -43,11 +43,9 @@ h1, h2, h3, .btn, .name, .sec{ font-family:'League Spartan','Arial Black',Arial,
   padding-left:max(16px, env(safe-area-inset-left,0px));
   padding-right:max(16px, env(safe-area-inset-right,0px));
   display:flex;
+  flex-wrap:wrap;
   gap:8px;
-  overflow-x:auto;
-  scrollbar-width:none;
 }
-.bar-inner::-webkit-scrollbar{ display:none; }
 .btn{
   flex:none;
   font-size:14px;
@@ -173,7 +171,7 @@ table.grid th, table.grid td{ border:1px solid var(--rule); padding:8px 12px; te
 table.grid thead th{
   background:var(--accent);
   color:var(--accent-ink);
-  font-family:'League Spartan',Arial,sans-serif;
+  font-family:'DM Sans',Arial,sans-serif;
   font-weight:600;
   letter-spacing:.06em;
   text-transform:uppercase;
@@ -182,7 +180,7 @@ table.grid thead th{
 table.grid td.n{ width:44px; color:var(--muted); text-align:right; font-variant-numeric:tabular-nums; }
 table.grid tr.area td{
   background:var(--band);
-  font-family:'League Spartan',Arial,sans-serif;
+  font-family:'DM Sans',Arial,sans-serif;
   font-weight:700;
   letter-spacing:.06em;
   text-transform:uppercase;
@@ -194,10 +192,76 @@ table.grid tbody tr:not(.area):nth-child(even) td{ background:var(--row); }
 .detail{ margin-top:40px; scroll-margin-top:72px; }
 .detail h3{ font-size:20px; font-weight:700; margin:24px 0 2px 0; }
 .detail .kind{ display:block; margin-bottom:10px; }
-.detail h4{ font-family:'League Spartan',Arial,sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; margin:16px 0 6px 0; color:var(--accent-text); }
+.detail h4{ font-family:'DM Sans',Arial,sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; margin:16px 0 6px 0; color:var(--accent-text); }
 .detail ul{ margin:0; padding-left:1.15em; }
 .detail li{ margin-bottom:5px; }
 .detail p{ margin:0 0 8px 0; max-width:72ch; }
+
+/* ---------- one-column document resume ---------- */
+.doc{
+  max-width:880px;
+  margin:0 auto;
+  background:var(--sheet);
+  border-top:6px solid var(--accent);
+  box-shadow:0 1px 3px rgba(0,0,0,.08), 0 10px 30px rgba(0,0,0,.06);
+  padding:44px 56px 48px 56px;
+}
+.doc-name{
+  font-size:clamp(30px,5vw,38px);
+  font-weight:700;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:var(--accent-text);
+  margin:0;
+  line-height:1.1;
+}
+.doc-title{ font-size:19px; color:var(--accent-text); margin:6px 0 4px 0; opacity:.85; }
+.doc-contact{ font-size:15.5px; color:var(--ink); margin:0; }
+.doc-contact .sep{ color:var(--muted); margin:0 6px; }
+.doc-contact a{ color:var(--accent-text); }
+.doc-sec{ margin-top:26px; scroll-margin-top:72px; }
+.doc-sec h2{
+  font-size:17px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  color:var(--accent-text);
+  margin:0 0 8px 0;
+}
+.doc-sec p{ margin:0; padding-left:14px; }
+.doc ul{ margin:0; padding-left:34px; }
+.doc li{ margin-bottom:4px; }
+.doc li b{ font-weight:600; }
+.role{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:2px 16px; font-weight:700; margin:12px 0 6px 0; }
+.role:first-of-type{ margin-top:0; }
+.role .t-sub{ font-weight:400; color:var(--muted); font-size:14px; }
+.role .dates{ white-space:nowrap; }
+.edu-row{ display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-left:34px; margin-bottom:4px; }
+.edu-row .dates{ font-weight:700; white-space:nowrap; }
+.proj-links{ display:inline-flex; gap:6px; margin-left:4px; }
+.proj-links a{ font-size:13.5px; }
+
+/* ---------- quick jump buttons under the portfolio title ---------- */
+.jump{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+.dash.first{ margin-top:0; margin-bottom:40px; }
+.dash figure a{ display:block; }
+.dash figcaption a{ font-weight:600; }
+
+/* ---------- dashboard previews on the resume ---------- */
+.dash-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; padding-left:34px; margin-top:6px; }
+.dash-card{ border:1px solid var(--rule); background:var(--row); text-decoration:none; color:var(--ink); display:flex; flex-direction:column; transition:border-color .15s ease; }
+.dash-card:hover{ border-color:var(--accent); }
+.dash-card img{ display:block; width:100%; height:150px; object-fit:cover; object-position:top; }
+.dash-card span{ padding:9px 12px; font-size:14px; border-top:1px solid var(--rule); background:#fff; }
+.dash-card b{ display:block; font-weight:600; }
+.dash-card em{ font-style:normal; color:var(--accent-text); font-size:13px; }
+.doc-sec p.dash-link{ margin-top:10px; padding-left:34px; }
+
+/* ---------- dashboards on the portfolio page ---------- */
+.dash{ margin-top:22px; }
+.dash figure{ margin:10px 0 0 0; border:1px solid var(--rule); background:var(--row); }
+.dash img{ display:block; width:100%; height:auto; }
+.dash figcaption{ font-size:13px; color:var(--muted); padding:8px 12px; border-top:1px solid var(--rule); background:#fff; }
 
 /* ---------- small screens ---------- */
 @media (max-width:760px){
@@ -208,6 +272,14 @@ table.grid tbody tr:not(.area):nth-child(even) td{ background:var(--row); }
   .left{ padding:24px 22px; }
   .right{ padding:24px 22px 32px 22px; }
   .wl-body{ padding:24px 18px 32px 18px; }
+  .doc{ padding:26px 20px 32px 20px; }
+  .doc ul{ padding-left:22px; }
+  .doc-sec p{ padding-left:0; }
+  .edu-row{ padding-left:0; }
+  .dash-cards{ padding-left:0; }
+  .btn{ font-size:13px; padding:6px 11px 5px 11px; }
+  .bar-inner{ gap:6px; }
+  .doc-sec{ scroll-margin-top:64px; }
   .stage{ padding-block:16px 40px; }
   .block, .detail, table.grid tr.area{ scroll-margin-top:64px; }
 }

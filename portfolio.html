@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Shyamal Bhatt | Portfolio</title>
 <meta name="description" content="Portfolio of Shyamal Bhatt: a task-by-task log of SEO work at CallHippo, and detailed write-ups of the Pocket Money and SnipNote apps.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="bar" aria-label="Portfolio sections">
   <div class="bar-inner">
+    <a class="btn" href="#dashboards">Dashboards</a>
     <a class="btn" href="#content">Content</a>
     <a class="btn" href="#offpage">Link Building</a>
     <a class="btn" href="#community">Community</a>
@@ -31,11 +32,44 @@
     <header class="band">
       <h1 class="name">Portfolio</h1>
       <p class="title">Shyamal Bhatt &middot; SEO Executive</p>
+      <div class="jump"><a class="btn fill" href="#dashboards">View dashboards</a><a class="btn" href="#worklog">Work log</a><a class="btn" href="#pocket-money">Projects</a><a class="btn" href="index.html">Back to resume</a></div>
     </header>
 
     <div class="wl-body">
 
-      <h2 class="sec">Work Log</h2>
+      <section class="detail dash first" id="dashboards">
+        <h2 class="sec">Dashboards</h2>
+        <p>Tools I built for day-to-day SEO work using AI-assisted development. In the screenshots, URLs, domains, dates and company details are blurred and every number is replaced with a random one, so they show what each dashboard does without any real company data.</p>
+
+        <h3>Backlink Monitor</h3>
+        <span class="kind">Link tracking tool</span>
+        <ul>
+          <li>Tracks every backlink placement in one table, with its source article, target page, anchor text, dofollow or nofollow status and the date it was last checked</li>
+          <li>Status checks flag each link as live, removed, erroring or not yet checked, with a summary at the top</li>
+          <li>Links can be added one by one, uploaded in bulk from CSV or Excel, or synced from a Google Sheet</li>
+          <li>Posts a daily link-health summary to Slack</li>
+          <li>Filters, search, and bulk actions to re-check, update, export or delete links</li>
+        </ul>
+        <figure>
+          <a href="images/backlink-monitor.jpg?v=2" target="_blank" rel="noopener"><img src="images/backlink-monitor.jpg?v=2" alt="Backlink Monitor dashboard, with URLs and dates blurred and numbers randomized" loading="lazy" width="1400" height="1032"></a>
+          <figcaption>Backlink Monitor (sample numbers) &middot; <a href="images/backlink-monitor.jpg?v=2" target="_blank" rel="noopener">Open full size</a></figcaption>
+        </figure>
+
+        <h3>URL Performance Dashboard</h3>
+        <span class="kind">Page-level SEO reporting</span>
+        <ul>
+          <li>Covers the performance of every URL on the site: pick any page and a date range to see its signups, clicks, impressions, click-through rate and average position, compared with the previous period</li>
+          <li>Combines Google Search Console search data, Google Analytics 4 traffic data, HubSpot signup data, and Ahrefs ranking and competitor data in one view</li>
+          <li>Shows who ranks for the page's target keyword and how its referring domains compare with the top competitors</li>
+          <li>Lists the keywords the page ranks for, flags quick wins, and suggests next steps based on the numbers</li>
+        </ul>
+        <figure>
+          <a href="images/url-performance.jpg?v=2" target="_blank" rel="noopener"><img src="images/url-performance.jpg?v=2" alt="URL Performance Dashboard, with URLs blurred and numbers randomized" loading="lazy" width="1280" height="1830"></a>
+          <figcaption>URL Performance Dashboard (sample numbers) &middot; <a href="images/url-performance.jpg?v=2" target="_blank" rel="noopener">Open full size</a></figcaption>
+        </figure>
+      </section>
+
+      <h2 class="sec" id="worklog">Work Log</h2>
       <p class="intro">The day-to-day SEO work behind my resume, grouped by area. This covers my role as SEO Executive at CallHippo, a B2B SaaS and VoIP company, from October 2024 to the present.</p>
 
       <div class="sheet-table-wrap">
@@ -87,15 +121,15 @@
             <tr><td class="n">34</td><td>Resolve Google Search Console indexing errors</td></tr>
             <tr><td class="n">35</td><td>Coordinate Core Web Vitals (Largest Contentful Paint) fixes across the page portfolio</td></tr>
             <tr><td class="n">36</td><td>Monitor and resolve crawl errors flagged by Ahrefs site audits</td></tr>
-            <tr><td class="n">37</td><td>Publish support pages that had not yet gone live</td></tr>
-            <tr><td class="n">38</td><td>Map internal redirect chains and inlink paths to clean up link-equity flow</td></tr>
-            <tr><td class="n">39</td><td>Review crawl and traffic-by-path data to prioritize technical fixes</td></tr>
+            <tr><td class="n">37</td><td>Map internal redirect chains and inlink paths to clean up link-equity flow</td></tr>
+            <tr><td class="n">38</td><td>Review crawl and traffic-by-path data to prioritize technical fixes</td></tr>
 
             <tr class="area" id="ai-search"><td colspan="2">Generative Engine Optimization and AI Search</td></tr>
-            <tr><td class="n">40</td><td>Publish content and secure brand mentions on pages that surface in LLM-based search and AI chat answers</td></tr>
-            <tr><td class="n">41</td><td>Target visibility in AI answers for core product keywords such as virtual phone numbers, virtual phone systems, and call center software</td></tr>
-            <tr><td class="n">42</td><td>Monitor CallHippo's presence and citations in AI and LLM answer engines for category questions</td></tr>
-            <tr><td class="n">43</td><td>Track community threads that AI engines cite and draft responses to strengthen the brand's AI citation presence</td></tr>
+            <tr><td class="n">39</td><td>Publish content and secure brand mentions on pages that surface in LLM-based search and AI chat answers</td></tr>
+            <tr><td class="n">40</td><td>Target visibility in AI answers for core product keywords such as virtual phone numbers, virtual phone systems, and call center software</td></tr>
+            <tr><td class="n">41</td><td>Monitor CallHippo's presence and citations in AI and LLM answer engines for category questions</td></tr>
+            <tr><td class="n">42</td><td>Track community threads that AI engines cite and draft responses to strengthen the brand's AI citation presence</td></tr>
+            <tr><td class="n">43</td><td>Build visibility in AI search results through ongoing engagement on Reddit, Quora, and Twitter/X</td></tr>
 
             <tr class="area" id="reporting"><td colspan="2">Reporting and Process</td></tr>
             <tr><td class="n">44</td><td>Maintain quarterly OKR trackers covering content, backlink, community, and AI-visibility work</td></tr>
@@ -108,6 +142,7 @@
           </tbody>
         </table>
       </div>
+
 
       <section class="detail" id="pocket-money">
         <h2 class="sec">Projects in Detail</h2>
